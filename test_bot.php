@@ -1,7 +1,6 @@
 <?php
-$url = "https://api.telegram.org/bot858754598:AAH6yoiHz_vBsiEJSdN0Wge1bjEY9s8MziY/sendMessage?parse_mode=html&chat_id=430265248";
-$url = $url . "&text=".urlencode('<b>Hello, World!</b>
-test');
+$url = "https://api.telegram.org/bot647977222:AAHuPrLQJp8WlxZLYBYluwRxFyy5tCj5aMs/sendMessage?parse_mode=html&chat_id=830303259";
+$url = $url . "&text=".urlencode('Sampah telah penuh');
 $ch = curl_init();
 $optArray = array(
     CURLOPT_URL => $url,
