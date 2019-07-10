@@ -30,7 +30,7 @@ CREATE TABLE `monitoring` (
   `enk` text NOT NULL,
   `tgl` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `monitoring` (
 
 LOCK TABLES `monitoring` WRITE;
 /*!40000 ALTER TABLE `monitoring` DISABLE KEYS */;
-INSERT INTO `monitoring` VALUES (3,3,'MODIFIED','/home/private/Documents/mas_bagus/test/test.txt','21d9d14600c5090df8a03cc2721218e5','2019-06-23 15:35:24'),(4,3,'CREATED','/home/private/Documents/mas_bagus/test/ll.txt','d41d8cd98f00b204e9800998ecf8427e','2019-06-23 15:37:37'),(5,3,'MODIFIED','/home/private/Documents/mas_bagus/test/ll.txt','d41d8cd98f00b204e9800998ecf8427e','2019-06-23 15:37:37'),(6,3,'DELETED','/home/private/Documents/mas_bagus/test/ll.txt','764e65dbf75b28bc374f5838c193a93e','2019-06-23 15:37:57'),(7,3,'MODIFIED','/home/private/Documents/mas_bagus/test/test.txt','28c50eeb660ad49019c9ca2eaeac7dbd','2019-06-23 15:47:55');
+INSERT INTO `monitoring` VALUES (8,4,'CREATED','/home/beer/Documents/bagus/target_dir/raskan.php','3f26b598f2823836a1fba3f43029c4d6','2019-07-09 17:30:12'),(9,4,'MODIFIED','/home/beer/Documents/bagus/target_dir/raskan.php','3f26b598f2823836a1fba3f43029c4d6','2019-07-09 17:30:13'),(10,4,'MODIFIED','/home/beer/Documents/bagus/target_dir/raskan.php','1e9874078a1cddf41619529b245d0093','2019-07-10 17:51:07');
 /*!40000 ALTER TABLE `monitoring` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -54,10 +54,11 @@ CREATE TABLE `tokens` (
   `id` int(5) NOT NULL AUTO_INCREMENT,
   `id_telegram` int(15) NOT NULL,
   `label` text NOT NULL,
+  `init_log` text,
   `token` text NOT NULL,
   `tgl_update` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,7 +67,7 @@ CREATE TABLE `tokens` (
 
 LOCK TABLES `tokens` WRITE;
 /*!40000 ALTER TABLE `tokens` DISABLE KEYS */;
-INSERT INTO `tokens` VALUES (3,430265248,'Coba Dir','IL1K7dafiz','2019-06-23 03:30:33');
+INSERT INTO `tokens` VALUES (4,430265248,'test','MY_INIT_5d25ceb39eb62','Gpi4lYostV','2019-07-09 17:26:56');
 /*!40000 ALTER TABLE `tokens` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -79,4 +80,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-23 16:27:10
+-- Dump completed on 2019-07-10 18:43:22

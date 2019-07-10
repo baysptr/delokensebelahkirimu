@@ -1,8 +1,11 @@
 <?php
+    include "config.php";
     $id = $_GET['id_token'];
     if(!$id){
         echo "<script>alert('Maaf, data anda tidak kami kenali!');window.location='monitoring.php';</script>";
     }
+    $hui = mysqli_query($conn, "select * from tokens where id = '$id'");
+    $reui = mysqli_fetch_assoc($hui);
 ?>
 
 <!doctype html>
@@ -36,7 +39,7 @@
 <!-- Begin page content -->
 <main role="main" class="flex-shrink-0">
     <div class="container">
-        <h1 class="mt-5">Monitoring File</h1><hr/>
+        <h1 class="mt-5">Monitoring File</h1>&nbsp;<a href="ini_logs/<?= $reui['init_log'] ?>.db" download target="_blank">First Log</a> <hr/>
         <table class="table">
             <thead>
             <tr>
@@ -49,7 +52,6 @@
             </thead>
             <tbody>
             <?php
-            include "config.php";
             $no = 1;
             $exec = mysqli_query($conn, "select * from monitoring where id_token = '$id' order by tgl desc");
             while($data = mysqli_fetch_array($exec)){

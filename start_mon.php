@@ -16,11 +16,11 @@ function do_telegram($id, $pesan){
 
 $token = $_POST['token'];
 $dir = $_POST['dir'];
-$tgl = date('Y-m-d H:i:S');
+$tgl = date('Y-m-d H:i:s');
 
 $exec = mysqli_query($conn, "select * from tokens where token = '$token'");
 $parse_data = mysqli_fetch_assoc($exec);
-$id_token = $parse_data['id'];
+$id_token = $parse_data['id_telegram'];
 $pesan = "Anda telah terhubung ke: <b>".$dir."</b>
 Date: <i>".$tgl."</i>";
 
