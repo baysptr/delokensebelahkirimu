@@ -39,7 +39,7 @@
 <!-- Begin page content -->
 <main role="main" class="flex-shrink-0">
     <div class="container">
-        <h1 class="mt-5">Monitoring File</h1>&nbsp;<a href="ini_logs/<?= $reui['init_log'] ?>.db" download target="_blank">First Log</a> <hr/>
+        <h1 class="mt-5">Monitoring File</h1>&nbsp;<a href="first_log.php?db=<?= $reui['init_log'] ?>.db" target="_blank">First Log</a> <hr/>
         <table class="table">
             <thead>
             <tr>
