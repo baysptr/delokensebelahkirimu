@@ -27,10 +27,6 @@ EOF;
 $ret = $db->query($sql);
 echo "<center><table border='1'><tr><td><strong>ID</strong></td><td><strong>Directory</strong></td><td><strong>Encrypt</strong></td><td><strong>Date</strong></td></tr>";
 while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
-//    echo "ID = ". $row['id'] . "\n";
-//    echo "Directory = ". $row['dir'] ."\n";
-//    echo "Encrypt = ". $row['enk'] ."\n";
-//    echo "Date = ".$row['tgl'] ."\n\n";
     echo "<tr><td>".$row['id']."</td><td>".$row['dir']."</td><td>".$row['enk']."</td><td>".$row['tgl']."</td></tr>";
 }
 echo "</table></center>";

